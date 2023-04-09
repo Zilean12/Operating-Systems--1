@@ -1,0 +1,24 @@
+Question -1
+
+Write a shell program to calculate the factorial of a number.
+
+
+Code -
+
+read -p "enter a no to calculate the factorial of a number: " num
+f=1
+while [ $num -gt 1 ]
+do
+f=$((fact*num))
+num=$((num-1))
+done
+echo $fact
+
+Important Instruction-
+
+1. To run above code you need the linx 
+2. In that open the terminal 
+3. write the gedit (fileName).sh
+4. Now write the code
+5. to Run the code sh (fileName).sh
+
