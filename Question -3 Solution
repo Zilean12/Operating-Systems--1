@@ -1,0 +1,29 @@
+Question 
+
+Write a shell program to display the following mark sheets of students by taking the input marks of students through the terminal
+
+                              Marks range                      Grade
+
+                                 90>=M<=100                      A
+
+                                   70>=M<=89                     B
+
+                                   40>=M<=69                     C
+
+                                         M<40                    F
+                                         
+
+Code 
+
+echo "Enter your marks:"
+read mark
+if [ $mark -ge 90 ] && [ $mark -le 100 ]
+then Grade="A"
+elif [ $mark -ge 70 ] && [ $mark -le 89 ]
+then Grade="B"
+elif [ $mark -ge 40 ] && [ $mark -le 69 ]
+then Grade="C"
+else [ $mark -le 40]
+Grade="F"
+fi
+echo "you achieve: $Grade"
