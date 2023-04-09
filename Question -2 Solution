@@ -1,0 +1,30 @@
+Question -
+
+ Write a shell program to display all the prime numbers between 1 to 100 using a while loop.
+
+Code 
+
+s_prime() {
+num=$1
+i=2
+while [ $i -lt $num ]
+do
+if [ $(($num % $i)) -eq 0 ]
+then
+return 1 # Not a prime
+fi
+i=$((i+1))
+done
+return 0 # Prime
+}
+# Loop through numbers 1 to 100
+num=1
+while [ $num -le 100 ]
+do
+is_prime $num
+if [ $? -eq 0 ] # If the function returns 0, then the number is prime
+then
+echo $num
+fi
+num=$((num+1))
+done
